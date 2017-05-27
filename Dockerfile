@@ -24,4 +24,5 @@ COPY install.ipxe /usr/share/nginx/html
 COPY ks.cfg /usr/share/nginx/html
 COPY rhel7min.cfg /usr/share/nginx/html
 COPY rhel7min.ipxe /usr/share/nginx/html
+COPY mcinit-rpm-1.0-6.x86_64.rpm rhel73/Packages
 CMD ["bash","/usr/src/app/svcipxe.sh"]
