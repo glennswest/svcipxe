@@ -1,0 +1,8 @@
+#!ipxe
+  
+  set base http://svcipxe.ncc9.com
+  
+  kernel ${base}/images/pxeboot/vmlinuz initrd=initrd.img repo=${base} console=ttyS1,115200 ksdevice=eth0 inst.headless inst.text inst.ks=${base}/ks.cfg inst.sshd
+  initrd ${base}/images/pxeboot/initrd.img
+  boot
+
