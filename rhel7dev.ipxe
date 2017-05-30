@@ -1,0 +1,7 @@
+#!ipxe
+dhcp
+set base http://svcipxe.ncc9.com
+kernel ${base}/images/pxeboot/vmlinuz initrd=initrd.img inst.repo=${base} console=ttyS1,115200n8 inst.text ip=dhcp ipv6.disable inst.ks=${base}/rhel7dev.cfg
+initrd ${base}/images/pxeboot/initrd.img
+boot
+

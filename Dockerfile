@@ -24,5 +24,7 @@ COPY install.ipxe /usr/share/nginx/html
 COPY ks.cfg /usr/share/nginx/html
 COPY rhel7min.cfg /usr/share/nginx/html
 COPY rhel7min.ipxe /usr/share/nginx/html
+COPY rhel7dev.cfg /usr/share/nginx/html
+COPY rhel7dev.ipxe /usr/share/nginx/html
 COPY repo/ /usr/share/nginx/html/repo/
 CMD ["bash","/usr/src/app/svcipxe.sh"]
