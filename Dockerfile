@@ -10,6 +10,7 @@ EXPOSE 80
 ADD root /
 
 COPY rhel73 /usr/share/nginx/html
+COPY rhel7atomic /usr/share/nginx/html/rhel7atomic
 
 # forward request logs to Docker log collector
 RUN ln -sf /dev/stdout /var/log/nginx/access.log
@@ -26,5 +27,9 @@ COPY rhel7min.cfg /usr/share/nginx/html
 COPY rhel7min.ipxe /usr/share/nginx/html
 COPY rhel7dev.cfg /usr/share/nginx/html
 COPY rhel7dev.ipxe /usr/share/nginx/html
+COPY rhel7kvm.cfg /usr/share/nginx/html
+COPY rhel7kvm.ipxe /usr/share/nginx/html
+COPY rhel7atomic.ipxe /usr/share/nginx/html
+COPY rhel7atomic.cfg /usr/share/nginx/html
 COPY repo/ /usr/share/nginx/html/repo/
 CMD ["bash","/usr/src/app/svcipxe.sh"]
